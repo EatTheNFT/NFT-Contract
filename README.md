@@ -6,6 +6,7 @@ If you appreciate my work and you were able to deploy your NFT collection based 
 
 I will update within the following days a javascript and html file to help users interact with your contract and your website
 (especially for the minting process)
+
 Also, a tutorial to create 10.000 ( or more ) unique images and link them to your ipfs uri is on the way
 
 The following steps are designed for beginners ( photoshop or real life artists )
