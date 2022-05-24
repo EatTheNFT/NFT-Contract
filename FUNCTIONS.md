@@ -1,3 +1,5 @@
+Donations Wallet Address: 0x0468C8d4e517C37267aA1DbF307350FFC996CBcB ETH/BNB/AVAX/MATIC If you appreciate my work and you were able to deploy your NFT collection based on this github repo, if you want to support my work you can donate to wallet above
+
 # Contract Setup
 
 First, you have to call __EatTheNFT_init function // Only the owner can call
