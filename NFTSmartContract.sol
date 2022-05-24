@@ -2738,6 +2738,7 @@ contract AAEatTheNFTUpgradeable is
     using StringsUpgradeable for uint256;
 
     uint256 public cost;
+    uint256 internal presaleCount;
     uint256 public presaleCost;
     uint32 public maxPerMint;
     uint32 public maxPerWallet;
@@ -2811,12 +2812,11 @@ contract AAEatTheNFTUpgradeable is
     // ------ Owner Only ------
 
     function updateSale(
-        bool _open,
         uint256 _cost,
         uint32 _maxW,
         uint32 _maxM
     ) public onlyOwner {
-        open = _open;
+        open = true;
         cost = _cost;
         maxPerWallet = _maxW;
         maxPerMint = _maxM;
@@ -2830,12 +2830,13 @@ contract AAEatTheNFTUpgradeable is
         reqToken = _address;
     }
 
-    function updatePresale(uint256 _presaleCost) public onlyOwner {
+    function updatePresale(uint256 _presaleCost, uint256 _count) public onlyOwner {
         presaleOpen = true;
         // merkleRoot = _root; If you want specific users to join presale, leave this row with //
         // if you want presale open for anyone. If you want to turn on merkleRoot update function
         // with this code function updatePresale(uint256 _presaleCost, bytes32 memory _root) and remove 2996-2998 row
         presaleCost = _presaleCost;
+        presaleCount = _count;
     }
 
     function updateReveal(bool _revealed, string memory _uri) public onlyOwner {
@@ -2927,6 +2928,7 @@ contract AAEatTheNFTUpgradeable is
     {
         require(presaleOpen, "Presale not open");
         require(msg.value >= presaleCost * count, "Not enough fund.");
+        require(supply() < presaleCount, "Presale closed");
 
         _safeMint(msg.sender, count);
     }
@@ -3038,3 +3040,4 @@ contract AAEatTheNFTUpgradeable is
 
 
 // File contracts/EatTheNFT.sol
+
