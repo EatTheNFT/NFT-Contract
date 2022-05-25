@@ -12,6 +12,13 @@ Also, a tutorial to create 10.000 ( or more ) unique images and link them to you
 The following steps are designed for beginners ( photoshop or real life artists )
 If you are already familiar with blockchain and you have some knowledges about deploying contracts, step over this introduction and read FUNCTIONS.MD
 
+# Update
+
+Removed >0 parameter from withdraw ( to avoid balance stuck vulnerabilities )
+Added >= 0 instead
+
+Added withdraw() parameter to all mint functions. Whenever someone mint an NFT, the withdrawal function will be triggered automatic.
+You don't need to pay gas fee anymore to receive your funds from sales,they will be sent to your wallet whenever someone mint tokens;
 
 # Basic Math to understand EVM ( Ethereum Virtual Machine ) values;
 Act carefull with ethereum value when you write the contract
