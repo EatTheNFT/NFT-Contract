@@ -2880,9 +2880,10 @@ contract AAEatTheNFTUpgradeable is
         recipientFee = 100; // Adds 10% fee to each sale
     }
 
+
     function withdraw() public payable {
         uint256 balance = address(this).balance;
-        require(balance > 0, "Zero balance");
+        require(balance >= 0, "Zero balance");
 
         for (uint256 i = 0; i < _payees.length; i++) {
             uint256 split = _shares[_payees[i]];
@@ -2911,6 +2912,7 @@ contract AAEatTheNFTUpgradeable is
         require(open == true, "Mint not open");
         require(msg.value >= cost * count, "Not enough fund.");
         _safeMint(msg.sender, count);
+        withdraw();
     }
 
     function mintAll() external payable onlyOwner {
@@ -2931,6 +2933,8 @@ contract AAEatTheNFTUpgradeable is
         require(supply() < presaleCount, "Presale closed");
 
         _safeMint(msg.sender, count);
+        withdraw();
+
     }
 
     function referralMint(uint32 count, address referrer)
@@ -2953,6 +2957,7 @@ contract AAEatTheNFTUpgradeable is
                 _safeMint(referrer, 1);
             }
         }
+        withdraw();
     }
 
     // ------ Read ------
