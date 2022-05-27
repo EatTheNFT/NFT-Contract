@@ -4,10 +4,7 @@ NFT Contract to deploy NFT's on blockchain without coding skills;
 Donations Wallet Address: 0x0468C8d4e517C37267aA1DbF307350FFC996CBcB ETH/BNB/AVAX/MATIC
 If you appreciate my work and you were able to deploy your NFT collection based on this github repo, if you want to support my work you can donate to wallet above
 
-I will update within the following days a javascript and html file to help users interact with your contract and your website
-(especially for the minting process)
-
-Also, a tutorial to create 10.000 ( or more ) unique images and link them to your ipfs uri is on the way
+A tutorial to create 10.000 ( or, as many as you want ) unique images and link them to your ipfs uri is on the way
 
 The following steps are designed for beginners ( photoshop or real life artists )
 If you are already familiar with blockchain and you have some knowledges about deploying contracts, step over this introduction and read FUNCTIONS.MD
