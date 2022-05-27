@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.7.1/dist/umd/index.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <h3><b style="color:rgb(0, 0, 0)">Connect with MetaMask:</b></h3><button id="Metamask" class="enableEthereumButton" onclick="switchNetwork()">  
+        MetaMask <span class="showAccount"></span></button>
+    <h3><b style="color:rgb(0, 0, 0)">Connect with WalletConnect:</b></h3>
+    <button id="WC"onclick="connectWC()">WalletConnect <span class="showAccount1"></span></button>
+    <h3><b style="color:rgb(0, 0, 0)">Mint/PresaleMint/RefferalMint:</b></h3>
+    <button id="Mint"onclick="RegularMint(); W3RegularMint()">Mint</button>
+    <button id="PresaleMint"onclick="PresaleMint(); W3PresaleMint()">PresaleMint</button>
+    <button id="RefferalMint"onclick="MintRefferal(); W3MintRefferal()">RefferalMint</button>
+    <script src="WalletConnect.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+        type="application/javascript"></script>
+        <script src="index.js"></script>
+        <script src="SwitchToEthereum.js"></script>
+        <script src="Metamask.js"></script>
+        <script src="Web3Interact.js"></script>
+        <script src="EthersInteract.js"></script>
+</body>
+</html>
