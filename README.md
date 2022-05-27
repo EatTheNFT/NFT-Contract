@@ -14,6 +14,11 @@ If you are already familiar with blockchain and you have some knowledges about d
 
 # Update
 
+Added dApp scripts and HTML file. Build your website easy.
+Disclaimer: Website design is your responsability, the scripts and html source file uploaded are designed on blank website page. The buttons are linked to
+scripts - designed to interact with your contract using the correct values and calculations formulas. Read the docs inside NFTProject to learn how to interact 
+with your smart contract and adjust the values provided on your website.
+
 Removed >0 parameter from withdraw ( to avoid balance stuck vulnerabilities )
 Added >= 0 instead
 
