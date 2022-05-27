@@ -14,7 +14,7 @@ Read these simple steps in order to learn to interact with your deployed contrac
 Deploy NFTSmartContract.sol
 Copy deployed contract Address
 Install Visual Studio Code or any editor preffered by you ( you need to edit your dApp sources )
-Ethers.js and Web3.js are already injected in HTML file, it is mandatory if you want to install them also
+Ethers.js and Web3.js are already injected in HTML file, it isn't mandatory if you want to install them also
 If you preffer to install them:
 
 Install node.js
