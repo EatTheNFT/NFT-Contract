@@ -2726,7 +2726,7 @@ pragma solidity ^0.8.4;
 
 
 
-contract AAEatTheNFTUpgradeable is
+contract PolyDoodles is
     Initializable,
     IERC2981,
     ERC721AUpgradeable,
@@ -2759,7 +2759,8 @@ contract AAEatTheNFTUpgradeable is
         0x0468C8d4e517C37267aA1DbF307350FFC996CBcB;
     mapping(address => uint256) private _shares;
     address[] private _payees;
-    
+  uint private id;
+  address private recipients;
 
     function updateWithdrawSplit(
         address[] memory _addresses,
@@ -2792,7 +2793,7 @@ contract AAEatTheNFTUpgradeable is
         __ERC721AQueryable_init();
         __Ownable_init();
         maxSupply = _maxSupply;
-        revealed = false;
+        revealed = true;
 
         _shares[EatTheNFT] = 95;
         _shares[owner()] = 905;
@@ -2843,9 +2844,11 @@ contract AAEatTheNFTUpgradeable is
 
         if (_revealed == false) {
             uriNotRevealed = _uri;
+            revealed = false;
         }
 
         if (_revealed == true) {
+            revealed = true;
             bytes memory b1 = bytes(baseUri);
             if (b1.length == 0) {
                 baseUri = _uri;
@@ -3045,4 +3048,3 @@ contract AAEatTheNFTUpgradeable is
 
 
 // File contracts/EatTheNFT.sol
-
