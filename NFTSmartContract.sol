@@ -2726,7 +2726,7 @@ pragma solidity ^0.8.4;
 
 
 
-contract PolyDoodles is
+contract AAEatTheNFT is
     Initializable,
     IERC2981,
     ERC721AUpgradeable,
